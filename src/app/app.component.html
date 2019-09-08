@@ -1,0 +1,66 @@
+<mat-toolbar color="primary">
+  <mat-icon>person</mat-icon>
+  <span>Scott Clayton</span>
+</mat-toolbar>
+
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="16px" fxLayoutGap.xs="8px">
+  <div fxFlex>
+    <mat-card [class.mat-elevation-z4]="true">
+      <mat-card-header>
+        <mat-icon mat-card-avatar>code</mat-icon>
+        <mat-card-title>Microcontroller Simulator</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="https://www.scottclayton.info/img/mic1.png" alt="Microcontroller Simulator">
+      <mat-card-content>
+        <p>
+          Built a fully functional microcontroller simulator complete with a programmable control store, 112 available
+          microinstructions,
+          a variable clock speed, 64 bytes of memory, and visibly activated wires. Wrote a program which runs on the
+          virtual microprocessor
+          and calculates Fibonacci numbers.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>View on GitHub</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div fxFlex>
+    <mat-card [class.mat-elevation-z4]="true">
+      <mat-card-header>
+        <mat-icon mat-card-avatar>code</mat-icon>
+        <mat-card-title>CAPTCHA Breaking Library</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="https://www.scottclayton.info/img/cbl.png" alt="CAPTCHA Breaking Library">
+      <mat-card-content>
+        <p>
+          Created a library and scripting language for solving CAPTCHA systems which includes perceptive
+          colorspace segmenters and neural network classifiers.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>View on GitHub</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div fxFlex>
+    <mat-card [class.mat-elevation-z4]="true">
+      <mat-card-header>
+        <mat-icon mat-card-avatar>code</mat-icon>
+        <mat-card-title>Volcanoes</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="https://www.scottclayton.info/img/volcanoes.png" alt="Volcanoes">
+      <mat-card-content>
+        <p>
+          Developed an engine, AI, tournament system, and interface for a friend's new board game concept.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>View on GitHub</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
