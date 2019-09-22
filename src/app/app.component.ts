@@ -15,8 +15,10 @@ export class AppComponent {
   }
   get_projects() {
     this.httpClient.get(this.cmsUrl + '/projects').subscribe((res: any[]) => {
-      console.log(res);
-      this.projects = res;
+      this.projects = res.filter(function (value, index, arr) {
+        return value.Enabled == 1;
+      });
+      this.projects.sort((a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime())
     });
   }
   parse_date(dateString) {

@@ -1,24 +1,25 @@
-<mat-toolbar color="primary">
-  <mat-icon>person</mat-icon>
+<mat-toolbar [class.mat-elevation-z4]="true" color="primary">
   <span>Scott Clayton</span>
 </mat-toolbar>
 
-<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="16px" fxLayoutGap.xs="8px">
-  <div fxFlex *ngFor="let project of projects">
-    <mat-card [class.mat-elevation-z4]="true" class="card">
-      <mat-card-header>
-        <mat-icon mat-card-avatar>code</mat-icon>
-        <mat-card-title>{{project.Title}}</mat-card-title>
-        <mat-card-subtitle>{{this.parse_date(project.Date)}}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="{{this.cmsUrl + project.Image.url}}" alt="Microcontroller Simulator">
-      <mat-card-content>
-        <p>{{project.Description}}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-button href="{{project.Link}}" target="_blank">View on GitHub</a>
-      </mat-card-actions>
-    </mat-card>
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div *ngFor="let project of projects" class="mdc-layout-grid__cell">
+      <mat-card [class.mat-elevation-z4]="true">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>code</mat-icon>
+          <mat-card-title>{{project.Title}}</mat-card-title>
+          <mat-card-subtitle>{{this.parse_date(project.Date)}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{this.cmsUrl + project.Image.url}}" alt="Microcontroller Simulator">
+        <mat-card-content>
+          <p>{{project.Description}}</p>
+        </mat-card-content>
+        <mat-card-actions *ngIf="project.Link && project.Link.length && project.LinkText && project.LinkText.length">
+          <a mat-button href="{{project.Link}}" target="_blank">{{project.LinkText}}</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
 </div>
 

@@ -1,12 +1,9 @@
 @import '~normalize.css';
+@import "@material/layout-grid/mdc-layout-grid";
+// @import "@material/top-app-bar/mdc-top-app-bar";
+// @import "@material/icon-button/mdc-icon-button";
 @import 'theme.scss';
 
-.container {
-    margin: 16px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.card {
-    
+.mdc-layout-grid {
+    max-width: 1100px;
 }
