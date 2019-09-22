@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'angular-material-headless';
-  private cmsUrl = "http://localhost:1337";
-  private projects = [];
+  cmsUrl =  "https://www.scottclayton.info/cms"; // "http://localhost:1337";
+  projects = [];
   constructor(private httpClient: HttpClient) {
     this.get_projects();
   }
