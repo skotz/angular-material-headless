@@ -1,6 +1,6 @@
 # Headless Example
 
-Playing around with a new set of tools.
+Playing around with a new set of tools. [Take a look!](https://skotz.github.io/angular-material-headless/)
 
 ## Tech Stack
 
@@ -15,3 +15,5 @@ Run `ng serve` to start the app. Run `strapi start` from the `cms` folder to sta
 ## Build
 
 Run `ng build --prod` to build the project.
+
+Run `ng build --prod --base-href "https://skotz.github.io/angular-material-headless/"` and `ngh` to build to the `gh-pages` branch automatically.
